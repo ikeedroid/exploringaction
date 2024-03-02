@@ -1,6 +1,6 @@
 
 name: Github Actions Demo
-no: push
+on: push
 jobs:
   Example-Actions-Job:
     name: Exploring Github Actions
@@ -23,9 +23,9 @@ jobs:
 
       - run: echo "Your repository has been copied to the path ${{ github.workspace }} on the runner."
 
-      - run: echo " The workflow is now readyu to test your code on the runner"
+      - run: echo " The workflow is now ready to test your code on the runner"
 
-      - name: conditional step whenm event name is pull request
+      - name: conditional step when event name is pull request
         if: ${{ github.event_name == 'pull_request' }}
         run: echo "This event is a pull request"
 
